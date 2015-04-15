@@ -1,0 +1,51 @@
+tests-teon
+~~~~~~~~~~
+
+Test data for TEON <https://wakaba.github.io/spec-teon/>.
+
+* File
+
+*.dat - Test data file
+
+* Test data format
+
+Test data are encoded in the format similar to HTML parser test data,
+as described in
+<https://wiki.whatwg.org/wiki/Parser_tests#Tree_Construction_Tests>.
+
+Parser implementations:
+
+  - Perl <https://github.com/wakaba/testdataparser>
+  - JavaScript <https://github.com/wakaba/samijs/blob/master/sami/script/sami-test.js>
+
+Fields:
+
+  #data
+  Input data (a TEON text)
+  #parsed
+  Parsed TEON document encoded in JSON
+  #serialized
+  Re-serialized parsed TEON document (a TEON text)
+
+The JSON text in the #parsed field is a JSON object with three
+name/value pairs: |scalars|, |enums|, and |lists|.  The |scalars|
+value is an object whose names are scalar field names and values are
+corresponding field values.  The |enums| value is an object whose
+names are enumeration field names and values are corresponding field
+values, represented as objects whose names are values in the set of
+the field value and values are number "1".  The |lists| value is an
+object whose names are scalar field names and values are corresponding
+field values, represetned as arrays whose items are values in the list
+of the field value.
+
+* Author
+
+Wakaba <wakaba@suikawiki.org>.
+
+These test data are developed as part of the TR project.
+
+* License
+
+Per CC0 <https://creativecommons.org/publicdomain/zero/1.0/>, to the
+extent possible under law, the author has waived all copyright and
+related or neighboring rights to this work.
