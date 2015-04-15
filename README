@@ -5,7 +5,7 @@ Test data for TEON <https://wakaba.github.io/spec-teon/>.
 
 * File
 
-*.dat - Test data file
+  *.dat - Test data file
 
 * Test data format
 
@@ -28,15 +28,19 @@ Fields:
   Re-serialized parsed TEON document (a TEON text)
 
 The JSON text in the #parsed field is a JSON object with three
-name/value pairs: |scalars|, |enums|, and |lists|.  The |scalars|
-value is an object whose names are scalar field names and values are
-corresponding field values.  The |enums| value is an object whose
-names are enumeration field names and values are corresponding field
-values, represented as objects whose names are values in the set of
-the field value and values are number "1".  The |lists| value is an
-object whose names are scalar field names and values are corresponding
-field values, represetned as arrays whose items are values in the list
-of the field value.
+name/value pairs: |scalars|, |enums|, and |lists|.
+
+The |scalars| value is an object where names are scalar field names
+and values are corresponding field values.
+
+The |enums| value is an object where names are enumeration field names
+and values are corresponding field values, represented as objects
+where names are values in the set of the field value and values are
+number "1".
+
+The |lists| value is an object where names are scalar field names and
+values are corresponding field values, represented as arrays where
+items are values in the list of the field value.
 
 * Author
 
