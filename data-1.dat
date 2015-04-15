@@ -207,3 +207,50 @@ $foo:ab
 {"scalars":{"bar":""},"enums":{},"lists":{}}
 #serialized
 $bar:
+
+#data escaped
+$foo:ab\u000D\u000A$bar:xx
+#parsed
+{"scalars":{"foo":"ab", "bar": "xx"},"enums":{},"lists":{}}
+#serialized
+$bar:xx
+$foo:ab
+
+#data escaped
+$foo:ab\u000A$bar:xx
+#parsed
+{"scalars":{"foo":"ab", "bar": "xx"},"enums":{},"lists":{}}
+#serialized
+$bar:xx
+$foo:ab
+
+#data escaped
+$foo:ab\u000D$bar:xx
+#parsed
+{"scalars":{"foo":"ab", "bar": "xx"},"enums":{},"lists":{}}
+#serialized
+$bar:xx
+$foo:ab
+
+#data escaped
+$foo:ab\u000D\u000D\u000A$bar:xx
+#parsed
+{"scalars":{"foo":"ab", "bar": "xx"},"enums":{},"lists":{}}
+#serialized
+$bar:xx
+$foo:ab
+
+#data escaped
+$foo:a\u000Db\u000A$bar:xx
+#parsed
+{"scalars":{"foo":"a", "bar": "xx"},"enums":{},"lists":{}}
+#serialized
+$bar:xx
+$foo:a
+
+#data escaped
+$foo:ab\u000D\u000A$ba\u000Dr:xx
+#parsed
+{"scalars":{"foo":"ab"},"enums":{},"lists":{}}
+#serialized
+$foo:ab
